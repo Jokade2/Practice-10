@@ -1,0 +1,46 @@
+Задание 1:
+
+def fibanachi(n):
+    if (n==0 or n==1):
+        return n
+    else:
+        return fib(n-2) + fib(n-1)
+ans = int(input())
+print(fibanachi(ans))
+
+Задание 2:
+ассимптотическая сложность алгорима О (2^n)
+
+Задание 3:
+fib_cache = {}
+def fib_memory(input_value):
+    if input_value in fib_cache:
+        return fib_cache[input_value]
+    if input_value == 1:
+            value = 1
+    elif input_value == 2:
+            value = 1
+    elif input_value > 2:           
+            value =  fib_memory(input_value -1) + fib_memory(input_value -2)
+    fibonacci_cache[input_value] = value
+    return value
+
+Задание 4:
+сложность алгоритма (n*log(n))
+
+Задание 5:
+
+def fib_for(n):
+    x = 0
+    y = 1
+    if n == 1:
+        return x
+    elif n == 2:
+        return y
+    else:
+        for i in range(2, n):
+            x = y
+            y = x + y
+        return y
+
+
